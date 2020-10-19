@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>fr.obeo.forestsimulation.parent</groupId>
+	<artifactId>parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+
+
+	<!-- pom parent must always set version, but module can use implicit value 
+		as long as: - child as the same version, - parent.version is set, - parent.relativePath 
+		is set. Thus children can use ${project.version} for all siblings. -->
+	<packaging>pom</packaging>
+
+	<name>Eclispe Con 2020 parent</name>
+
+	<properties>
+		<tycho.version>1.7.0</tycho.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<!--Adds this dependency so the maven-nativedependencies-plugin plugin 
+				will unpack the native librairies during the builds -->
+			<groupId>org.lwjgl.lwjgl</groupId>
+			<artifactId>lwjgl</artifactId>
+			<version>2.9.3</version>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>../jmonkey</module>
+		<module>../jts</module>
+		<module>../fr.obeo.forestsimulation.model</module>
+		<module>../fr.obeo.forestsimulation.model.edit</module>
+		<module>../fr.obeo.forestsimulation.rcp</module>
+		<module>../fr.obeo.forestsimulation.tests</module>
+		<module>../fr.obeo.forestsimulation.feature</module>
+		<module>../fr.obeo.forestsimulation.rcp.product</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<!-- All inheriting projects are eclipse projects. -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.1.0</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<version>1.8</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-enforcer-plugin</artifactId>
+					<version>3.0.0-M2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>2.6.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>build-helper-maven-plugin</artifactId>
+					<version>3.0.0</version>
+				</plugin>
+				<!-- Eclipse tycho -->
+				<plugin> <!-- Lifecycle -->
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-maven-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin> <!-- Target platform -->
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>target-platform-configuration</artifactId>
+					<version>${tycho.version}</version>
+					<configuration>
+						<resolver>p2</resolver>
+						<environments>
+							<environment>
+								<os>win32</os>
+								<ws>win32</ws>
+								<arch>x86_64</arch>
+							</environment>
+						</environments>
+						<target>
+							<artifact>
+								<groupId>fr.obeo.forestsimulation.parent</groupId><!-- self -->
+								<artifactId>parent</artifactId><!-- self -->
+								<version>1.0.0-SNAPSHOT</version>
+								<classifier>tp/target</classifier>
+							</artifact>
+						</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-toolchains-plugin</artifactId>
+					<version>3.0.0</version>
+					<executions>
+						<execution>
+							<phase>validate</phase>
+							<goals>
+								<goal>toolchain</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<toolchains>
+							<jdk>
+								<version>8</version>
+							</jdk>
+						</toolchains>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<version>${tycho.version}</version>
+
+					<configuration>
+						<compilerVersion>8</compilerVersion>
+						<source>8</source>
+						<target>8</target>
+						<encoding>UTF-8</encoding>
+						<useJDK>BREE</useJDK>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-source-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-repository-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-p2-director-plugin</artifactId>
+					<version>${tycho.version}</version>
+				</plugin>
+			</plugins>
+
+		</pluginManagement>
+	</build>
+</project>

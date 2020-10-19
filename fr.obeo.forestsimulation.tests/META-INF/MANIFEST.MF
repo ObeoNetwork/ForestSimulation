@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rcp Tests
+Bundle-SymbolicName: fr.obeo.forestsimulation.tests
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: fr.obeo.forestsimulation.rcp;bundle-version="1.0.0"
+Automatic-Module-Name: fr.obeo.forestsimulation.rcp.tests
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.junit;bundle-version="4.13.0"

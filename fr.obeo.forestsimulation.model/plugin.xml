@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated model -->
+      <package
+            uri="http://www.example.org/forest"
+            class="fr.obeo.forestsimulation.forest.ForestPackage"
+            genModel="model/model.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.content_parser">
+      <!-- @generated model -->
+      <parser
+            contentTypeIdentifier="fr.obeo.forestsimulation.model.forest"
+            class="fr.obeo.forestsimulation.forest.util.ForestResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.core.contenttype.contentTypes">
+      <!-- @generated model -->
+      <content-type
+            base-type="org.eclipse.emf.ecore.xmi"
+            file-extensions="forest"
+            id="fr.obeo.forestsimulation.model.forest"
+            name="%_UI_Forest_content_type"
+            priority="normal">
+         <describer class="org.eclipse.emf.ecore.xmi.impl.RootXMLContentHandlerImpl$Describer">
+            <parameter name="namespace" value="http://www.example.org/forest"/>
+            <parameter name="kind" value="xmi"/>
+         </describer>
+      </content-type>
+   </extension>
+
+</plugin>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_Vi32MOkREeqsVYseYUUkBg" elementId="fr.obeo.forestsimulation.rcp.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_bk5qEOkREeqsVYseYUUkBg" elementId="fr.obeo.forestsimulation.rcp.trimmedwindow.0" bindingContexts="__DQoAOuhEeq4kJq3Paz-Sg" y="500">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_ey0b8OugEeq4kJq3Paz-Sg" elementId="fr.obeo.forestsimulation.rcp.partsashcontainer.2">
+      <children xsi:type="basic:PartSashContainer" xmi:id="_UAyrUOt1EeqMF7zLb45nrA" elementId="fr.obeo.forestsimulation.rcp.partsashcontainer.1" horizontal="true">
+        <children xsi:type="basic:PartSashContainer" xmi:id="_EcmkEPMdEeqvMcKo_W15tg" elementId="fr.obeo.forestsimulation.rcp.partsashcontainer.0" containerData="20">
+          <children xsi:type="basic:Part" xmi:id="_Vi_d4Ot1EeqMF7zLb45nrA" elementId="fr.obeo.forestsimulation.rcp.part.modelexplorer" containerData="50" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.parts.ModelExplorerPart" label="Model explorer"/>
+          <children xsi:type="basic:Part" xmi:id="_GDm-IPMdEeqvMcKo_W15tg" elementId="fr.obeo.forestsimulation.rcp.part.props" containerData="50" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.parts.PropsPart" label="Props"/>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_9f8zQOkREeqsVYseYUUkBg" elementId="fr.obeo.forestsimulation.rcp.part.3DView" containerData="80" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.parts.Part3D" label="3D View"/>
+      </children>
+    </children>
+    <trimBars xmi:id="_dJAJgOzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.trimbar.0">
+      <children xsi:type="menu:ToolBar" xmi:id="_d-NTMOzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_fEp94OzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handledtoolitem.0" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/add-root-tree.png" command="_jtHWwOzUEeqFeO4XgadBVQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0F4YIOzYEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handledtoolitem.3" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/add-sub-tree.png" command="_2FccIOzYEeqFeO4XgadBVQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_0v138OzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handledtoolitem.1" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/edit_template.png" command="_SIoL0OuhEeq4kJq3Paz-Sg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_TlmEIOzVEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handledtoolitem.2" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/delete_template.png" command="_8JGkgOzUEeqFeO4XgadBVQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_ch8ckO2wEeqgQtRELS0Ahw" elementId="fr.obeo.forestsimulation.rcp.handledtoolitem.4" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/time_obj.png" command="_g74RQO2wEeqgQtRELS0Ahw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2X8kcO5kEeqFrIZePIZkaA" elementId="fr.obeo.forestsimulation.rcp.handledtoolitem.5" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/stop.png" command="_7p7Q4O5jEeqFrIZePIZkaA"/>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_LFKk8O5mEeqFrIZePIZkaA" elementId="fr.obeo.forestsimulation.rcp.directtoolitem.debugForest" iconURI="platform:/plugin/fr.obeo.forestsimulation.rcp/icons/debuglast_co.png" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.DebugForest"/>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_GHp3EPJhEeqQQrMMk1XzLQ" elementId="fr.obeo.forestsimulation.rcp.trimbar.bottom" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_H0KcMPJhEeqQQrMMk1XzLQ" elementId="fr.obeo.forestsimulation.rcp.toolcontrol.0" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.parts.BottomToolBar"/>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_T6oU8OuhEeq4kJq3Paz-Sg" elementId="fr.obeo.forestsimulation.rcp.handler.0" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.EditForestHandler" command="_SIoL0OuhEeq4kJq3Paz-Sg"/>
+  <handlers xmi:id="_lF02IOzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handler.1" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.AddTreeAction" command="_jtHWwOzUEeqFeO4XgadBVQ"/>
+  <handlers xmi:id="_9y2wkOzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handler.2" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.DeleteTree" command="_8JGkgOzUEeqFeO4XgadBVQ"/>
+  <handlers xmi:id="_35FkAOzYEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.handler.3" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.AddSubTreeAction" command="_2FccIOzYEeqFeO4XgadBVQ"/>
+  <handlers xmi:id="_dTwUAO2wEeqgQtRELS0Ahw" elementId="fr.obeo.forestsimulation.rcp.handler.gros" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.GrowForestAction" command="_g74RQO2wEeqgQtRELS0Ahw"/>
+  <handlers xmi:id="_9q0xoO5jEeqFrIZePIZkaA" elementId="fr.obeo.forestsimulation.rcp.handler.stopGrowing" contributionURI="bundleclass://fr.obeo.forestsimulation.rcp/fr.obeo.forestsimulation.rcp.actions.StopGrowingAction" command="_7p7Q4O5jEeqFrIZePIZkaA"/>
+  <bindingTables xmi:id="_wpma0OuhEeq4kJq3Paz-Sg" elementId="fr.obeo.forestsimulation.rcp.bindingtable.0" bindingContext="__DQoAOuhEeq4kJq3Paz-Sg">
+    <bindings xmi:id="_xLYSMOuhEeq4kJq3Paz-Sg" elementId="fr.obeo.forestsimulation.rcp.keybinding.0" keySequence="cTR+l" command="_SIoL0OuhEeq4kJq3Paz-Sg"/>
+  </bindingTables>
+  <rootContext xmi:id="__DQoAOuhEeq4kJq3Paz-Sg" elementId="org.eclipse.e4.ide.application" name="Global"/>
+  <commands xmi:id="_SIoL0OuhEeq4kJq3Paz-Sg" elementId="fr.obeo.forestsimulation.rcp.command.editlocation" commandName="Edit location"/>
+  <commands xmi:id="_jtHWwOzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.command.addTree" commandName="Add Tree"/>
+  <commands xmi:id="_8JGkgOzUEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.command.deleteTree" commandName="Delete"/>
+  <commands xmi:id="_2FccIOzYEeqFeO4XgadBVQ" elementId="fr.obeo.forestsimulation.rcp.command.addSubTree" commandName="Add sub tree"/>
+  <commands xmi:id="_g74RQO2wEeqgQtRELS0Ahw" elementId="fr.obeo.forestsimulation.rcp.command.grow" commandName="Grow forest"/>
+  <commands xmi:id="_7p7Q4O5jEeqFrIZePIZkaA" elementId="fr.obeo.forestsimulation.rcp.command.stopGrow" commandName="Stop growing"/>
+  <addons xmi:id="_Vi32MekREeqsVYseYUUkBg" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_Vi32MukREeqsVYseYUUkBg" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_Vi32M-kREeqsVYseYUUkBg" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_Vi32NOkREeqsVYseYUUkBg" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_Vi32NekREeqsVYseYUUkBg" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_Vi32NukREeqsVYseYUUkBg" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_Vi32N-kREeqsVYseYUUkBg" elementId="org.eclipse.e4.ui.workbench.handler.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+</application:Application>

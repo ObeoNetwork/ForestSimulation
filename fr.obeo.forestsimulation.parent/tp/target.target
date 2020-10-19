@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/eclipse-cbi/targetplatform-dsl -->
+<target name="Eclipse con 2020 3D" sequenceNumber="1600700467">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="org.eclipse.e4.core.tools.feature.source.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.transaction.sdk.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.rcp.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.e4.core.tools.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.rcp.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.executable.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.emf.edit.ui.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.osgi.services" version="0.0.0"/>
+      <unit id="org.eclipse.collections.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.equinox.core.feature.feature.group" version="0.0.0"/>
+      <unit id="org.eclipse.collections.feature.source.feature.group" version="0.0.0"/>
+      <repository location="http://download.eclipse.org/releases/2020-06"/>
+    </location>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
+      <unit id="javax.xml.stream" version="0.0.0"/>
+      <repository location="https://download.eclipse.org/tools/orbit/downloads/drops/R20200529191137/repository"/>
+    </location>
+  </locations>
+</target>

@@ -1,0 +1,21 @@
+target "Eclipse con 2020 3D"
+
+with source, requirements
+
+location "http://download.eclipse.org/releases/2020-06" {
+	org.eclipse.e4.core.tools.feature.source.feature.group lazy
+	org.eclipse.emf.transaction.sdk.feature.group lazy
+	org.eclipse.e4.rcp.feature.group lazy
+	org.eclipse.e4.core.tools.feature.feature.group lazy
+	org.eclipse.rcp.feature.group lazy
+	org.eclipse.equinox.executable.feature.group lazy
+	org.eclipse.emf.edit.ui.feature.group lazy
+	org.eclipse.osgi.services lazy
+	org.eclipse.collections.feature.feature.group lazy
+	org.eclipse.equinox.core.feature.feature.group lazy
+	org.eclipse.collections.feature.source.feature.group lazy
+}
+
+location "https://download.eclipse.org/tools/orbit/downloads/drops/R20200529191137/repository" {
+	javax.xml.stream lazy
+}
