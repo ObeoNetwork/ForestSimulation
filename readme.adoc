@@ -23,6 +23,13 @@ Then the simulation relies on several properties editable in the application:
 ** Health/Sick probability
 * And many other
 
+== Build & IDE
+
+Build and test _mvn clean verify_ in folder _fr.obeo.forestsimulation.parent_
+
+In order to make the project compile in Eclipse you need to compile the project at least once with Maven to download the required dependencies.
+
+
 == Demo
 
 image::demo.gif[]
