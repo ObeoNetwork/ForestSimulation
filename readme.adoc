@@ -34,4 +34,18 @@ In order to make the project compile in Eclipse you need to compile the project 
 image::demo.gif[]
 
 
+== Graphic attribution credits
+
+
+=== 3D Assets
+
+https://skfb.ly/6yMRs
+
+Licensed under: https://creativecommons.org/licenses/by/4.0/
+
+
+
+
+
+
 
