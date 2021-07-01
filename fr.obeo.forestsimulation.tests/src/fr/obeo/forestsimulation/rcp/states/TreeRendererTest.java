@@ -28,6 +28,7 @@ import org.junit.Test;
 import com.jme3.app.state.AbstractAppState;
 import com.jme3.math.Vector3f;
 import com.jme3.scene.Node;
+import com.jme3.system.AppSettings;
 import com.jme3.system.JmeContext;
 
 import fr.obeo.forestsimulation.forest.Forest;
@@ -74,7 +75,7 @@ public class TreeRendererTest {
 				latch.countDown();
 			};
 		};
-		cApp = new CustomApp(session, new AbstractAppState[] { renderer }) {
+		cApp = new CustomApp(new AppSettings(false),session, new AbstractAppState[] { renderer }) {
 			
 			protected void runQueuedTasks() {
 				super.runQueuedTasks();

@@ -15,5 +15,5 @@ Export-Package: fr.obeo.forestsimulation.model,
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.core.runtime,
- jmonkey;bundle-version="3.2.0"
+ com.jme3;bundle-version="3.3.2"
 Bundle-ActivationPolicy: lazy

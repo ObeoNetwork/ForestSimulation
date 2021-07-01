@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl3-swt-common-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl3-swt-linux-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl3-swt-macos-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl3-swt-windows-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gson-2.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jme3-core-3.3.2-stable.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jme3-desktop-3.3.2-stable.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jme3-lwjgl3-3.3.2-stable.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jme3-niftygui-3.3.2-stable.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jme3-plugins-3.3.2-stable.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsr305-2.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-3.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-3.2.3-natives-linux.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-3.2.3-natives-macos.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-3.2.3-natives-windows.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-glfw-3.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-glfw-3.2.3-natives-linux.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-glfw-3.2.3-natives-macos.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-glfw-3.2.3-natives-windows.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-jemalloc-3.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-jemalloc-3.2.3-natives-linux.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-jemalloc-3.2.3-natives-macos.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-jemalloc-3.2.3-natives-windows.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-openal-3.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-openal-3.2.3-natives-linux.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-openal-3.2.3-natives-macos.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-openal-3.2.3-natives-windows.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-opencl-3.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-opengl-3.2.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-opengl-3.2.3-natives-linux.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-opengl-3.2.3-natives-macos.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/lwjgl-opengl-3.2.3-natives-windows.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/nifty-1.4.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/nifty-default-controls-1.4.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/nifty-style-black-1.4.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xpp3-1.1.4c.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

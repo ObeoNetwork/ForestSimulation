@@ -18,7 +18,7 @@
 	<name>Eclispe Con 2020 parent</name>
 
 	<properties>
-		<tycho.version>1.7.0</tycho.version>
+		<tycho.version>2.3.0</tycho.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -34,7 +34,7 @@
 	</dependencies>
 
 	<modules>
-		<module>../jmonkey</module>
+		<module>../com.jme3</module>
 		<module>../jts</module>
 		<module>../fr.obeo.forestsimulation.model</module>
 		<module>../fr.obeo.forestsimulation.model.edit</module>

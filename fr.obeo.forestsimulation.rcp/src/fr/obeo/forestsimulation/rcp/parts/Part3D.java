@@ -20,12 +20,11 @@ import javax.inject.Inject;
 
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.awt.SWT_AWT;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.widgets.Composite;
 
 import com.jme3.app.state.AbstractAppState;
-import com.jme3.system.lwjgl.LwjglCanvas;
+import com.jme3.swt.SWTContext;
 
 import fr.obeo.forestsimulation.rcp.Activator;
 import fr.obeo.forestsimulation.rcp.CustomApp;
@@ -36,7 +35,7 @@ import fr.obeo.forestsimulation.rcp.states.LodState;
 import fr.obeo.forestsimulation.rcp.states.TreeRenderer;
 
 public class Part3D {
-	private LwjglCanvas canvas;
+//	private LwjglCanvas canvas;
 	private Composite jme3Window;
 	private Frame jme3awtFrame;
 	private CustomApp app;
@@ -62,17 +61,9 @@ public class Part3D {
 		}));
 		states.add(new LodState());
 
-		app = new CustomApp(session, states.toArray(new AbstractAppState[states.size()]));
+		app = new CustomApp(CustomApp.createAppSettings(top), session, states.toArray(new AbstractAppState[states.size()]));
 
-		this.canvas = app.startOnCanvas();
-		if (canvas != null) {
-
-			jme3Window = new Composite(top, SWT.EMBEDDED);
-
-			jme3awtFrame = SWT_AWT.new_Frame(jme3Window);
-
-			jme3awtFrame.add(canvas.getCanvas());
-		}
+		SWTContext context = app.startOnCanvas();
 	}
 
 	@PreDestroy

@@ -10,6 +10,8 @@
  *******************************************************************************/
 package fr.obeo.forestsimulation.rcp;
 
+import org.eclipse.swt.widgets.Composite;
+
 import com.jme3.app.SimpleApplication;
 import com.jme3.app.state.AbstractAppState;
 import com.jme3.light.AmbientLight;
@@ -20,10 +22,10 @@ import com.jme3.renderer.queue.RenderQueue.ShadowMode;
 import com.jme3.scene.Geometry;
 import com.jme3.scene.shape.Quad;
 import com.jme3.shadow.DirectionalLightShadowRenderer;
+import com.jme3.swt.SWTContext;
 import com.jme3.system.AppSettings;
 import com.jme3.system.JmeContext;
 import com.jme3.system.JmeSystem;
-import com.jme3.system.lwjgl.LwjglCanvas;
 
 import fr.obeo.forestsimulation.rcp.cam.CustomFlyCam;
 import fr.obeo.forestsimulation.rcp.helpers.MaterialBuilder;
@@ -44,17 +46,21 @@ public class CustomApp extends SimpleApplication {
 
 	private ISession session;
 
-	public CustomApp(ISession session, AbstractAppState... states) {
+	public CustomApp(AppSettings appSettings, ISession session, AbstractAppState... states) {
 		super(states);
 		this.session = session;
+		setSettings(appSettings);
 	}
 
-	public static AppSettings createAppSettings() {
+	public static AppSettings createAppSettings(Composite top) {
 		AppSettings newSetting = new AppSettings(true);
 		newSetting.setFrameRate(DEFAULT_FRAMERATE); // In APogy can be changed via property
 		newSetting.setAudioRenderer(null); // We don't need audio in this application.
 		newSetting.setSamples(4); // Use anti aliasing set to 0 if not
 
+		// Force SWT renderer
+		newSetting.setCustomRenderer(com.jme3.swt.SWTContext.class);
+		newSetting.put(SWTContext.PARENT_COMPOSITE, top);
 		newSetting.setMinResolution(MIN_RES_WIDTH, MIN_RES_HEIGHT);
 		return newSetting;
 	}
@@ -75,7 +81,7 @@ public class CustomApp extends SimpleApplication {
 		assetManager.addClassLoader(this.getClass().getClassLoader());
 		flyCam = new CustomFlyCam(cam);
 		CustomFlyCamAppState flyCamState = stateManager.getState(CustomFlyCamAppState.class);
-		if(flyCamState != null) {
+		if (flyCamState != null) {
 			flyCamState.setCamera((CustomFlyCam) flyCam);
 		}
 
@@ -122,21 +128,14 @@ public class CustomApp extends SimpleApplication {
 		rootNode.addLight(al);
 	}
 
-	public LwjglCanvas startOnCanvas() {
+	public SWTContext startOnCanvas() {
 
 		start(JmeContext.Type.Canvas);
 
-		setPauseOnLostFocus(false);
-
-		LwjglCanvas canvas = (LwjglCanvas) getContext();
-
 		startCanvas(true);
 
-		canvas.getCanvas().setFocusable(true);
-		setDisplayFps(true);
-		setDisplayStatView(true);
-
-		return canvas;
+		
+		return (SWTContext)getContext();
 	}
 
 }
