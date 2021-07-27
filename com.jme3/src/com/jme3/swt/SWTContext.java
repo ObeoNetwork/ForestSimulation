@@ -114,6 +114,8 @@ import com.jme3.util.LWJGLBufferAllocator.ConcurrentLWJGLBufferAllocator;
  */
 public class SWTContext implements JmeContext, Runnable {
 
+	private static final int DEFAULT_FRAME_RATE = 60;
+
 	public static final String PARENT_COMPOSITE = "SWTContext.PARENT_COMPOSITE";
 
 	public static final boolean CL_GL_SHARING_POSSIBLE = true;
@@ -157,13 +159,14 @@ public class SWTContext implements JmeContext, Runnable {
 
 	private GLCapabilities swtCapabilities;
 
-	private int frameRate;
 
 	private Composite parent;
 
 	private int width;
 
 	private int height;
+
+	private int period;
 
 	@Override
 	public void setSystemListener(final SystemListener listener) {
@@ -471,7 +474,12 @@ public class SWTContext implements JmeContext, Runnable {
 	@Override
 	public void setSettings(AppSettings settings) {
 		this.settings.copyFrom(settings);
-		frameRate = settings.getFrameRate();
+		int frameRate = settings.getFrameRate();
+		if(frameRate > 0) {
+			period = 1000/frameRate;
+		}else {
+			period = 1000/DEFAULT_FRAME_RATE;
+		}
 		parent = (Composite)settings.get(PARENT_COMPOSITE);
 		if (parent == null) {
 			throw new IllegalStateException("Missing parent composite");
@@ -621,7 +629,7 @@ public class SWTContext implements JmeContext, Runnable {
 	public void run() {
 		runOneUpdate();
 		if (parent != null && !parent.isDisposed()) {
-			parent.getDisplay().timerExec(frameRate, this::run);
+			parent.getDisplay().timerExec(period, this::run);
 		}
 	}
 
